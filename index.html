@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
 <style>
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
@@ -17,6 +18,61 @@ body {
 
 * {
    cursor: url(cursor.png), auto;
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  vertical-align: bottom;
+  color: white;
+  text-decoration: bold;
+  font-size: 34px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* SOCIAL MEDIA STICKY BAR */
+
+ /* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.instagram {
+  background: #da467e;
+  color: white;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
 }
 
 /* NAV BAR */ 
@@ -243,7 +299,10 @@ img {
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
+ <div class="container">
 <img src="paburritologo.jpg" style="width:100%">
+  <div class="centered">My Paburritos</div>
+</div> 
 
 <div style="padding-left:16px">
   <h2>Responsive Topnav with Dropdown</h2>
@@ -270,12 +329,12 @@ function myFunction() {
 </div>
 
 <div class="mySlides fade">
-  <img src="burrito2.jpg" style="width:100%">
+  <img src="BurritoPork.jpg" style="width:100%">
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
-  <img src="burrito2.jpg" style="width:100%">
+  <img src="BurritoChicken.jpg" style="width:100%">
   <div class="text">Caption Three</div>
 </div>
 
@@ -289,6 +348,12 @@ function myFunction() {
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<!-- The social media icon bar -->
+<div class="icon-bar">
+  <a class="instagram" href="https://www.instagram.com/my_paburritos/" target="_blank"><i class="fa fa-instagram"></i></a>
+  <a class="facebook" href="https://www.facebook.com/My-Paburritos-105540617908725/" target="_blank"><i class="fa fa-facebook"></i></a>
 </div>
 
 <script>
